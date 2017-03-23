@@ -1,0 +1,181 @@
+@import "./publicVar.scss";
+@import "./pullLoad.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+@function px2per( $px, $px2:750px ){
+    @return ($px / $px2) * 100%; 
+}
+
+.banner-container {
+    height: px2Rem( 300px );
+	background: red;
+}
+
+
+/*列表样式*/
+.item-container {
+    display: block;
+    padding-top: px2Rem(24px);
+    background: #fff; 
+    margin-top: px2Rem(8px);
+
+    .content-container {
+
+        .head-container {
+            width: px2Rem(692px);
+            margin: 0 auto;
+
+            .logo{
+                width: px2Rem(86px);
+                height: px2Rem(86px);
+                background: #faf88a;
+            }
+             
+            .center {
+                padding-left: px2Rem( 34px );
+
+               .company-name {
+                    color: $titleFontColor;
+                    padding-bottom: px2Rem( 18px );
+                    padding-top: px2Rem(6px);
+                    line-height: 1em;
+                }
+                
+                .release-time {
+                    color: $fontColor;
+                }     
+            }  
+
+            .btn {
+                width: px2Rem( 176px );
+                height: px2Rem( 52px );
+                line-height: px2Rem( 52px );
+                border-radius: px2Rem( 10px );
+                background: #3b3b3b;
+                text-align: center;
+                color: #fff;
+                
+                .iconfont {
+                }
+
+                span {
+                    margin-left: px2Rem(12px);
+                }
+            }            
+            
+        }
+
+
+        .body-container {
+            padding: 0 px2Rem(6px);
+            padding-top: px2Rem(30px);
+            border-bottom: 1px solid $broderColor; 
+
+            .container {
+                width: px2Rem(692px);  
+                margin: 0 auto;  
+                padding-bottom: px2Rem(20px);         
+                    
+                .left {
+                    width: px2Rem(476px);
+
+                    .title {
+                        color: $titleFontColor;
+                        line-height: 1.5em;
+                        min-height: px2Rem(110px);
+                    }
+
+                    .info {
+                        color: $fontColor;
+                        padding-top: px2Rem(12px);
+                    }
+                }
+
+                .cover {
+                    width: px2Rem(162px);
+                    height: px2Rem(162px);
+                    background: #ccc;
+                }
+
+            }
+
+        }
+
+
+        .footer-container {
+            width: px2Rem(692px);  
+            margin: 0 auto;
+            padding-top: px2Rem(27px);
+            padding-bottom: px2Rem(20px);
+            color: $fontColor;
+            line-height: 1em;
+            .contacts {
+
+                .vertical-line {
+                    display: inline-block;
+                    margin: px2Rem(-2px) px2Rem(14px) 0;
+                }
+            }
+
+
+            .right {
+                width: px2Rem(278px);
+
+                .iconfont {
+                    padding-right: px2Rem(10px);
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+
+
+}
+.edit {
+    width: px2Rem(132px);
+    height: px2Rem(132px);
+    line-height: px2Rem(132px);
+    border-radius:100%;
+    background: #d2d2d2;
+    text-align: center;
+    position: fixed;
+    right: px2per(11px);
+    bottom: px2Rem(112px);
+
+    a {
+        display: block;
+        color: $fontColor;
+    }
+
+    .iconfont {
+        font-size: px2Rem(70px);
+    }
+} 
+
+/*列表样式*/
+ 
+.tloader {
+    padding-bottom: px2Rem(110px);
+}
+
+/*.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+*/

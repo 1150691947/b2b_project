@@ -1,0 +1,22 @@
+.checked-list {
+  padding: 0.26667rem; }
+  .checked-list .checked-item {
+    display: inline-block;
+    width: 1.06667rem;
+    height: 0.66667rem;
+    line-height: 0.66667rem;
+    text-align: center;
+    background: red;
+    border-radius: 0.13333rem;
+    color: #fff;
+    margin: 0.13333rem; }
+
+.province-list {
+  background: #fff; }
+  .province-list .item-content, .province-list .city-list .city-item {
+    height: 1.06667rem;
+    line-height: 1.06667rem;
+    padding-left: 0.26667rem;
+    border-bottom: 1px solid #e0e0e0; }
+  .province-list .city-list .city-item {
+    padding-left: 40px; }

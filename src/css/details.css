@@ -1,0 +1,108 @@
+.details-page {
+  padding-bottom: 1.70667rem; }
+  .details-page .cover {
+    height: 4.53333rem;
+    background: red; }
+  .details-page .title-container {
+    padding: 0.37333rem 0.53333rem 0.26667rem 0.46667rem;
+    background: #fff; }
+    .details-page .title-container .title {
+      color: #333;
+      line-height: 1.3em; }
+  .details-page .company-info {
+    margin-top: 0.13333rem;
+    padding-top: 0.29333rem;
+    background: #fff;
+    margin-bottom: 0.13333rem; }
+    .details-page .company-info .info-container {
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 0.34667rem; }
+      .details-page .company-info .info-container .container {
+        width: 9.33333rem;
+        margin: 0 auto; }
+        .details-page .company-info .info-container .container .top-container .logo {
+          width: 1.14667rem;
+          height: 1.14667rem;
+          background: #faf88a; }
+        .details-page .company-info .info-container .container .top-container .info {
+          padding-left: 0.42667rem; }
+          .details-page .company-info .info-container .container .top-container .info .company-name {
+            color: #333;
+            font-weight: bold;
+            padding-top: 0.13333rem;
+            padding-bottom: 0.21333rem; }
+          .details-page .company-info .info-container .container .top-container .info .time {
+            color: #999; }
+        .details-page .company-info .info-container .container .top-container .iconfont {
+          color: #999;
+          padding-top: 0.16rem; }
+        .details-page .company-info .info-container .container .bottom-container {
+          color: #999;
+          padding-top: 0.45333rem; }
+          .details-page .company-info .info-container .container .bottom-container .find-industry {
+            padding-bottom: 0.26667rem; }
+          .details-page .company-info .info-container .container .bottom-container .effective-time {
+            color: #a6843d; }
+    .details-page .company-info .company-intr {
+      padding: 0.34667rem 0.61333rem 0.42667rem 0.37333rem;
+      color: #333; }
+      .details-page .company-info .company-intr .intr {
+        font-weight: bold; }
+      .details-page .company-info .company-intr .content {
+        line-height: 1.4em;
+        padding-top: 0.26667rem; }
+  .details-page .btn {
+    display: block;
+    width: 100%;
+    height: 1.30667rem;
+    line-height: 1.30667rem;
+    text-align: center;
+    color: #fff;
+    background: #2a2a2a;
+    position: fixed;
+    bottom: 0; }
+    .details-page .btn .iconfont {
+      padding-right: 0.45333rem; }
+  .details-page .tab-wrap {
+    background: #fff; }
+    .details-page .tab-wrap .tab-nav {
+      height: 1rem;
+      line-height: 1rem;
+      border-bottom: 1px solid #e0e0e0; }
+      .details-page .tab-wrap .tab-nav .nav-item {
+        display: inline-block;
+        width: 4.09333rem; }
+      .details-page .tab-wrap .tab-nav .provide {
+        text-align: right;
+        margin-right: 9.06667%; }
+      .details-page .tab-wrap .tab-nav .current-nav {
+        color: #a6843d; }
+      .details-page .tab-wrap .tab-nav .need {
+        text-align: center; }
+    .details-page .tab-wrap .tab-content {
+      padding: 0.29333rem 0.50667rem 0.26667rem 0.64rem;
+      color: #666;
+      border-bottom: 1px solid #e0e0e0; }
+      .details-page .tab-wrap .tab-content .content-item {
+        display: none;
+        line-height: 1.7em; }
+      .details-page .tab-wrap .tab-content .current-content {
+        display: block; }
+    .details-page .tab-wrap .tab-footer {
+      height: 1rem; }
+      .details-page .tab-wrap .tab-footer .container {
+        width: 50%;
+        height: 100%;
+        line-height: 1rem;
+        color: #999; }
+        .details-page .tab-wrap .tab-footer .container .iconfont {
+          margin-right: 0.2rem; }
+        .details-page .tab-wrap .tab-footer .container .coop {
+          display: inline-block;
+          width: 1.86667rem;
+          text-align: center;
+          margin-left: 8.53333%; }
+        .details-page .tab-wrap .tab-footer .container .see {
+          display: inline-block;
+          text-align: center;
+          width: 1.86667rem; }

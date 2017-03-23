@@ -1,0 +1,32 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+
+
+.industry-list {
+
+	.item {
+		display: inline-block;
+		min-width: px2Rem(238px);
+		height: px2Rem(78px);
+		line-height: px2Rem(78px);
+		text-align: center;
+		border-radius: px2Rem(10px);
+		background-color: $industryItemBGC;
+		color:$titleFontColor;
+		margin-top: px2Rem(40px);
+		margin-left: px2Rem(90px);
+		padding: 0 px2Rem(4px);
+	}
+
+	.checked {
+		background-color:$industryItemCheckedBG;
+		color: #fff;
+	}
+}  

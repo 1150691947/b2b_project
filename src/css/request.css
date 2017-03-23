@@ -1,0 +1,40 @@
+.request-page .info-container {
+  background: #fff;
+  padding: 0.50667rem 0 0.34667rem; }
+  .request-page .info-container .container {
+    width: 92.26667%;
+    margin: 0 auto; }
+    .request-page .info-container .container .left-container {
+      width: 69.07514%;
+      color: #333;
+      line-height: 1.4em; }
+    .request-page .info-container .container .cover {
+      width: 2.16rem;
+      height: 2.16rem;
+      background: #ccc; }
+
+.request-page .textarea-container textarea {
+  display: block;
+  margin: 0.42667rem auto 0;
+  width: 84.26667%;
+  height: 2.34667rem;
+  border-radius: 0.13333rem;
+  background: #fff;
+  padding: 0.37333rem 0.26667rem;
+  font: inherit; }
+
+.btn-container .btn {
+  width: 77.06667%;
+  height: 1.06667rem;
+  line-height: 1.06667rem;
+  text-align: center;
+  border-radius: 0.13333rem;
+  margin: 0.88rem auto 0;
+  color: #fff; }
+
+.btn-container .submit-btn {
+  background: #2a2a2a; }
+
+.btn-container .skip-btn {
+  background: #999;
+  margin-top: 0.53333rem; }

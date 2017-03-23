@@ -1,0 +1,29 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+
+.news-page {
+	padding-top: px2Rem(40px);
+
+	.menu-list {
+		padding: 0 px2Rem(12px) 0 px2Rem(6px);
+		background: #fff;
+
+		.menu-item {
+			display: flex;
+  			justify-content: space-between;
+  			height: px2Rem(90px);
+  			line-height: px2Rem(90px);
+  			border-bottom: 1px solid $broderColor;
+  			padding: 0 px2Rem(22px);
+  			color: $titleFontColor;
+		}
+	}
+	
+} 

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+.release-page {
+  background: #fff; }
+  .release-page .info-item {
+    width: 97.86667%;
+    min-height: 1.12rem;
+    line-height: 1.12rem;
+    padding: 0 0.26667rem;
+    margin: 0 auto;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    color: #333; }
+    .release-page .info-item .right {
+      width: 70%;
+      padding-top: 0.08rem; }
+      .release-page .info-item .right textarea {
+        width: 100%;
+        font-size: 0.4rem; }
+  .release-page .radio-container .label {
+    position: relative; }
+    .release-page .radio-container .label input[type="radio"] {
+      width: 0.34667rem;
+      height: 0.34667rem;
+      vertical-align: middle;
+      margin-right: 0.4rem;
+      visibility: hidden; }
+    .release-page .radio-container .label .radio {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 0.34667rem;
+      height: 0.34667rem;
+      margin-top: -0.17333rem;
+      border: 1px solid #e0e0e0; }
+      .release-page .radio-container .label .radio .iconfont {
+        line-height: 1em;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: none; }
+    .release-page .radio-container .label input[type="radio"]:checked + .radio i {
+      display: block; }
+  .release-page .budget input[type="radio"] {
+    margin-right: 0.72rem; }
+  .release-page .budget .budget-content {
+    display: inline-block;
+    width: 1.97333rem;
+    height: 0.70667rem;
+    border: 1px solid #e0e0e0;
+    margin-left: 0.26667rem;
+    border-radius: 0.13333rem; }
+    .release-page .budget .budget-content input[type="text"] {
+      width: 100%;
+      height: 100%;
+      display: block;
+      padding: 0.05333rem 0.08rem; }
+
+/*日期选择样式*/

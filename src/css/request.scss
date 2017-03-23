@@ -1,0 +1,70 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+
+.request-page {
+	
+	.info-container {
+		background: #fff;
+		padding: px2Rem(38px) 0 px2Rem(26px);
+			
+		.container { 
+			width: px2per(692px);
+			margin: 0 auto;
+
+			.left-container {
+				width: px2per( 478px, 692px );	
+				color: $titleFontColor;
+				line-height: 1.4em; 
+			}	
+
+			.cover {
+				width: px2Rem(162px);
+				height: px2Rem(162px);
+				background:#ccc; 
+			}
+		}	
+	}
+
+
+	.textarea-container textarea {
+		display: block;
+		margin: px2Rem(32px) auto 0;
+		width: px2per(632px);
+		height: px2Rem(176px);
+		border-radius: px2Rem(10px);
+		background: #fff;
+		padding: px2Rem(28px) px2Rem(20px);
+		font: inherit;
+	}
+}
+
+.btn-container {
+	.btn {
+		width: px2per(578px); 
+		height: px2Rem(80px);
+		line-height: px2Rem(80px);
+		text-align: center;
+		border-radius: px2Rem(10px);
+		margin: px2Rem(66px) auto 0;
+		color: #fff;
+	}
+
+	.submit-btn {
+		background: $btnBg;
+	}
+
+	.skip-btn {
+		background: $fontColor;
+		margin-top: px2Rem(40px);
+	}
+
+
+	
+}

@@ -1,0 +1,59 @@
+ @import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+
+
+.send-record {
+
+
+	.tab-menu {
+		width: 100%;	
+		height: px2Rem(90px);
+		line-height: px2Rem(90px);
+		background: #fff;
+
+		.menu-item {
+			display: inline-block;
+			width: (100/3)*1%;
+			text-align: center;
+			color: $fontColor6;
+		}
+
+		.active {
+			color:$titleFontColor;
+		}
+	}
+
+	
+	.item {
+		
+
+		.time {
+			color: #2a2a2a;
+		}
+
+		.body-container {
+			color: $fontColor;
+
+			.title {
+				color: $titleFontColor;
+				line-height: 1.6em;
+			}
+
+			.label {
+				padding-top: px2Rem(24px);
+
+				.industry{
+					margin-right: px2per(160px);
+				}
+
+			}
+		}
+	}	
+}

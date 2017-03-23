@@ -1,0 +1,41 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+
+.nav-list {
+	width: 100%;
+	height: px2Rem(100px);
+	background: #282828;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+
+	.nav-item {
+		width: (100/3)*1%;
+		display: inline-block;
+		text-align: center;
+		
+		a {
+			color: #c4c4c4;
+		}	
+
+		.icon {
+			padding: px2Rem(10px) 0;
+		}
+
+		p {
+			line-height: 1em;
+		}
+
+		.active {
+			color: #fff;
+		}
+	}
+	
+} 

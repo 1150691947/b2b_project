@@ -1,0 +1,123 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+
+.release-page {
+	background: #fff;
+
+	.info-item {
+		width: px2per(734px);
+		min-height: px2Rem(84px);
+		line-height: px2Rem(84px);
+		padding: 0 px2Rem(20px);
+		margin: 0 auto;
+		border-bottom:1px solid $broderColor;
+		display: flex;
+		justify-content: space-between;
+		color: $titleFontColor;
+	
+		.left {
+			// flex-grow: 1;
+		}
+
+
+		.right {
+			width: 70%;
+			padding-top: px2Rem(6px);
+			textarea {
+				width: 100%;
+				font-size: px2Rem(30px); 
+			}
+		}
+		
+		// .label {  
+		// 	flex-grow: 2;
+		// }
+ 
+	}
+
+	.radio-container {
+		
+		.label {
+			position: relative;
+
+			input[type="radio"] {
+				width: px2Rem(26px);
+				height: px2Rem(26px);
+				vertical-align: middle;
+				margin-right: px2Rem(30px);
+				visibility: hidden;
+			}
+
+			.radio {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				width: px2Rem(26px);
+				height: px2Rem(26px);
+				margin-top: px2Rem(-13px);
+				border: 1px solid $broderColor;
+
+				.iconfont {
+					line-height: 1em;
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%,-50%);
+					display: none;
+				}
+
+			}	
+
+			input[type="radio"]:checked + .radio i {
+				display: block;
+			}
+		}
+		
+	}
+
+	.budget {	
+
+		input[type="radio"] {
+			margin-right: px2Rem(54px);	
+		}
+
+		.budget-content {
+			display: inline-block;
+			width: px2Rem(148px);
+			height: px2Rem(53px);
+			border:1px solid $broderColor; 
+			margin-left: px2Rem(20px);
+			border-radius: px2Rem(10px);
+
+			input[type="text"] {
+				width: 100%;
+				height: 100%;
+				display: block;
+				padding: px2Rem(4px) px2Rem(6px); 
+			}
+		} 
+	}
+}
+
+
+/*日期选择样式*/
+
+// .datepicker .datepicker-viewport {
+// 	height:px2Rem(300px);
+// }	
+
+// .datepicker .datepicker-scroll>li {
+// 	height:px2Rem(45px);
+// }
+
+// .datepicker .datepicker-wheel {
+// 	height:px2Rem(45px);
+// }
+
