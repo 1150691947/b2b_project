@@ -1,0 +1,79 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100% 
+}
+
+
+.pro-info {
+	background: #fff;
+	
+	.label-block { 
+		width: 100%;
+		height: px2Rem(60px);
+		line-height: px2Rem(60px);
+		text-align: center;
+		color: #fff;
+		background: #ff6767;
+	}
+
+	.info-item {
+		width: px2per(734px);
+		min-height: px2Rem(84px);
+		padding: 0 px2Rem(20px);
+		margin: 0 auto;
+		border-bottom:1px solid #c3c3c3; 
+		display: flex;
+		justify-content: space-between;
+		color: $titleFontColor;
+	
+		.left {
+			line-height: px2Rem(84px);
+			flex-grow: 1;
+		}
+
+
+		// width: 40%;
+		input{
+ 			text-align: right;
+ 			flex-grow: 2;  
+		}
+
+
+		.right { 
+			width: 60%;
+			position: relative;
+			input{
+				width: 100%;
+				position: absolute;
+				left: 0;
+				top:50%;
+				transform: translateY(-50%);
+			}
+		}
+
+		// .label {  
+		// 	flex-grow: 2;
+		// }
+
+		.iconfont { 
+			line-height: px2Rem(84px);
+			color: #999;  
+		} 
+ 
+	}
+
+	.btn {
+		width: 100%; 
+		height: px2Rem(98px);
+		line-height: px2Rem(98px);
+		text-align: center;
+		background: $btnBg;
+		color: #fff;
+		position: fixed;
+		bottom: 0;
+	}
+}

@@ -1,0 +1,35 @@
+@import "./publicVar.scss";
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+@function px2per( $px, $px2:750px ){
+    @return ($px / $px2) * 100%; 
+}
+
+
+.success-cooper {
+
+	.hide {
+		display: none;
+	}
+	.tab-container {
+		width: 100%;
+		padding: px2Rem(18px) 0;
+		background: #fff;
+		.tab {
+			width: 50%;
+			height: px2Rem(58px);
+			line-height: px2Rem(58px);
+			text-align: center;
+			display: inline-block;
+			color: #999;
+			&:last-child{
+				border-left: 1px solid $borderColor;  
+			}
+
+			&.active {
+				color: #333; 
+			}
+		}
+	}
+}

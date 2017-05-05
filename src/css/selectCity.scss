@@ -6,39 +6,57 @@
 @function px2per( $px, $px2:750px ){
 	@return ($px / $px2) * 100%; 
 }
+.select-city {
+	padding-bottom: px2Rem(108px);
+	.checked-list {
+		padding: px2Rem(20px);
 
-.checked-list {
-	padding: px2Rem(20px);
-
-	.checked-item {
-		display: inline-block;
-		width: px2Rem(80px);
-		height: px2Rem(50px);
-		line-height: px2Rem(50px);
-		text-align: center;
-		background:red;
-		border-radius: px2Rem(10px);
-		color: #fff;
-		margin: px2Rem(10px);
-	}
-}
-
-.province-list {
-	background: #fff;
-	
-	.item-content {
-		height: px2Rem(80px);
-		line-height: px2Rem(80px);
-		padding-left: px2Rem(20px);
-		border-bottom: 1px solid $broderColor;
-	}
-
-	.city-list {
-		
-	
-		.city-item { 
-			@extend .item-content; 
-			padding-left: (40px);   
+		.checked-item {
+			display: inline-block;
+			width: px2Rem(80px);
+			height: px2Rem(50px);
+			line-height: px2Rem(50px);
+			text-align: center;
+			background: #ff6767;
+			border-radius: px2Rem(10px);
+			color: #fff;
+			margin: px2Rem(10px);
 		}
+	}
+
+	.province-list { 
+		background: #fff; 
+		
+		.item-content {
+			height: px2Rem(80px);
+			line-height: px2Rem(80px);
+			padding-left: px2Rem(20px);
+			border-bottom: 1px solid $borderColor;
+
+			.iconfont {
+				margin-right: px2Rem(20px);
+				color: #999;
+			}
+		}
+
+		.city-list {
+			
+		
+			.city-item { 
+				@extend .item-content; 
+				padding-left: px2Rem(60px);   
+			}
+		} 
 	} 
-}  
+
+	.btn {
+		width: 100%;
+		height: px2Rem(98px);
+		line-height: px2Rem(98px);
+		text-align: center;
+		color: #fff;
+		background: $btnBg;
+		position: fixed;
+		bottom: 0;
+	} 	
+}

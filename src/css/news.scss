@@ -9,7 +9,7 @@
 }
 
 .news-page {
-	padding-top: px2Rem(40px);
+	// padding-top: px2Rem(40px);
 
 	.menu-list {
 		padding: 0 px2Rem(12px) 0 px2Rem(6px);
@@ -18,11 +18,15 @@
 		.menu-item {
 			display: flex;
   			justify-content: space-between;
-  			height: px2Rem(90px);
-  			line-height: px2Rem(90px);
-  			border-bottom: 1px solid $broderColor;
+  			height: px2Rem(110px);
+			line-height: px2Rem(110px);
+  			border-bottom: 1px solid $borderColor;
   			padding: 0 px2Rem(22px);
   			color: $titleFontColor;
+		}
+
+		li:last-child a{
+			border-bottom:none;
 		}
 	}
 	

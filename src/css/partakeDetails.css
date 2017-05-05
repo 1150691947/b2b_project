@@ -1,0 +1,68 @@
+.partakeDetails-page .container {
+  padding: 0.4rem 0.34667rem 0.4rem 0.42667rem;
+  background: #fff; }
+  .partakeDetails-page .container .reprot {
+    width: 2.29333rem;
+    height: 0.74667rem;
+    background: #2a2a2a;
+    text-align: center;
+    line-height: 0.74667rem;
+    border-radius: 0.13333rem;
+    color: #fff; }
+
+.partakeDetails-page .introduce {
+  padding: 0.37333rem 0.4rem 0.53333rem;
+  background: #fff;
+  margin-top: 0.13333rem;
+  color: #333; }
+  .partakeDetails-page .introduce .title {
+    padding-bottom: 0.29333rem; }
+  .partakeDetails-page .introduce .desc {
+    line-height: 1.5em; }
+
+.partakeDetails-page .blacklist {
+  margin-top: 0.26667rem;
+  padding: 0.26667rem 0.66667rem 0.18667rem 0.4rem;
+  background: #Fff; }
+  .partakeDetails-page .blacklist .text {
+    line-height: 0.66667rem; }
+  .partakeDetails-page .blacklist .blacklist-btn {
+    width: 1.2rem;
+    height: 0.66667rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.32rem;
+    box-shadow: 0 0 0.08rem #ccc;
+    position: relative;
+    transition: background .3s; }
+    .partakeDetails-page .blacklist .blacklist-btn .round {
+      width: 0.66667rem;
+      height: 0.66667rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 100%;
+      position: absolute;
+      left: -0.02667rem;
+      background: #fff;
+      transition: left .3s; }
+  .partakeDetails-page .blacklist .blacklist-btn-right {
+    background: #45e199; }
+    .partakeDetails-page .blacklist .blacklist-btn-right .round {
+      left: 0.58667rem; }
+
+.partakeDetails-page .logo-container .logo {
+  width: 1.14667rem;
+  height: 1.14667rem;
+  margin-right: 0.4rem; }
+
+.partakeDetails-page .logo-container .name {
+  color: #333; }
+
+.partakeDetails-page .logo-container .time {
+  color: #999;
+  padding-top: 0.13333rem; }
+
+.partakeDetails-page .info-container {
+  color: #666;
+  line-height: 1em;
+  padding-top: 0.32rem; }
+  .partakeDetails-page .info-container .nature, .partakeDetails-page .info-container .scale {
+    padding-top: 0.21333rem; }

@@ -1,0 +1,27 @@
+.brand-settled .brand-list {
+  width: 96.26667%;
+  margin: 0 auto;
+  padding-top: 0.13333rem; }
+  .brand-settled .brand-list .brand-item {
+    display: inline-block;
+    width: 4.73333rem;
+    height: 4.73333rem;
+    background: #fff;
+    margin-right: 0.08rem;
+    margin-bottom: 0.08rem; }
+    .brand-settled .brand-list .brand-item .logo-container {
+      height: 2.85333rem;
+      position: relative; }
+      .brand-settled .brand-list .brand-item .logo-container img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .brand-settled .brand-list .brand-item .brand-name {
+      color: #333;
+      text-align: center; }
+      .brand-settled .brand-list .brand-item .brand-name p {
+        padding-top: 0.32rem;
+        line-height: 1em; }

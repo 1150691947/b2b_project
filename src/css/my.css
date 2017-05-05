@@ -1,0 +1,87 @@
+.my-page {
+  height: 100%;
+  position: relative; }
+  .my-page .mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99; }
+    .my-page .mask .mask-img {
+      width: 100%;
+      height: 16.09333rem; }
+  .my-page .info-container {
+    padding: 0.26667rem 0 0.37333rem 0.42667rem;
+    background: #Fff;
+    margin-bottom: 0.13333rem; }
+    .my-page .info-container .not-auth {
+      width: 78%;
+      line-height: 1.65333rem; }
+    .my-page .info-container .auth {
+      line-height: 1em;
+      padding-top: 0.10667rem; }
+      .my-page .info-container .auth .wx-info {
+        padding: 0.26667rem 0; }
+      .my-page .info-container .auth .auth-name {
+        padding-right: 0.4rem; }
+      .my-page .info-container .auth .auth-work .line {
+        color: #999;
+        padding: 0 0.16rem; }
+      .my-page .info-container .auth .level {
+        color: #00aeff; }
+    .my-page .info-container .logo {
+      width: 1.65333rem;
+      height: 1.65333rem;
+      margin-right: 0.42667rem; }
+    .my-page .info-container .wx-name {
+      color: #333; }
+    .my-page .info-container .tel {
+      color: #666;
+      padding-left: 0.53333rem; }
+      .my-page .info-container .tel .num {
+        padding-left: 0.26667rem; }
+  .my-page .data-show {
+    height: 1.4rem;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 0.18667rem; }
+    .my-page .data-show .data-item {
+      width: 33.33333%;
+      display: inline-block; }
+      .my-page .data-show .data-item .num {
+        color: #a6843d;
+        line-height: 0.74667rem; }
+      .my-page .data-show .data-item .text {
+        color: #333; }
+      .my-page .data-show .data-item:nth-child(2) {
+        width: 33%;
+        position: relative; }
+        .my-page .data-show .data-item:nth-child(2):after, .my-page .data-show .data-item:nth-child(2):before {
+          content: '';
+          display: inline-block;
+          width: 1px;
+          height: 0.85333rem;
+          position: absolute;
+          top: 50%;
+          margin-top: -0.37333rem;
+          background: #e0e0e0; }
+        .my-page .data-show .data-item:nth-child(2):before {
+          left: 0; }
+        .my-page .data-show .data-item:nth-child(2):after {
+          right: 0; }
+  .my-page .menu-container .item-container {
+    background: #fff;
+    padding: 0 0.08rem; }
+  .my-page .menu-container .menu-item {
+    display: flex;
+    justify-content: space-between;
+    height: 1.46667rem;
+    line-height: 1.46667rem;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 0.42667rem; }
+  .my-page .menu-container:last-child {
+    background: red; }
+    .my-page .menu-container:last-child .menu-item {
+      border-bottom: none; }

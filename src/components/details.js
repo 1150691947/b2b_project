@@ -1,68 +1,48 @@
 import React, { Component } from 'react';
 import { Link } from "react-router";
-
 import classnames from "classnames";
-
 import "../css/details.css";
-
-export default class DetailsPage extends Component {
-	render(){
-		return (
-			<div className="details-page">
-				<div className="cover"><img src="" alt=""/></div>
-
-				<div className="title-container">
-					<div className="title fontsize30">
-						提供旗下签约主播网红艺人／直播／微博／资源／网综广告位资源，寻求资源置换。
-					</div>
-				</div>
-
-				<CompanyInfo />
-
-				<TabBlock />
-
-				<Link to='/request' className="btn fontsize36"><i className="iconfont fontsize44">&#xe763;</i>合作请求</Link>
-			</div>
-		)
-	}
-}
-
+import LazyLoad from 'react-lazyload';
 class CompanyInfo extends Component{
 	constructor(){
 		super(); 
-
 		this.state = {
-			
-		}
-	}
-	handleClick(){
-
+			showIntroduce : false
+		} 
 	} 
-	render(){
+	handleClick(){ 
+		this.setState({
+			showIntroduce : !this.state.showIntroduce//显示与隐藏公司介绍
+		});
+	}  
+	render(){  
+		const props = this.props;
+		const trade = props.seek_trade && props.seek_trade.split(",");
 		return (
-			<div className="company-info">
-				<div className="info-container">
+			<div className={classnames("company-info",{"show":this.state.showIntroduce})}>
+				<div className="info-container"> 
 					<div className="container">
-						<div className="top-container clearfix">
+	 					<div className="top-container clearfix">
 
-							<img src="" alt="" className="logo fl"/>
+							<img src={props.headimgurl} alt="头像" className="logo fl"/>
 
 							<div className="info fl">
 								<div className="company-name fontsize30">
-									公司名称
+									{props.nickname}
 								</div>
-								<div className="time fontsize24">上升时间</div>
+								<div className="time fontsize24">发布时间：{props.create_time}</div>
 							</div>
-							<div className="fr" onClick={this.handleClick.bind(this)}>
+							<div className="fr triangle" onClick={this.handleClick.bind(this)}>
 								<i className="iconfont fontsize32">&#xe667;</i>
 							</div>
 						</div>
 
 						<div className="bottom-container fontsize24">							
-							<div className="find-industry">寻找行业：互联网／it</div>	
+							<div className="find-industry">寻找行业：{trade && trade.length === 23 ? "不限" : props.seek_trade}</div>	
+							<div className="range-area">合作地区：{props.city}</div>
 							<div className="clearfix">
-								<div className="range-area fl fontsize30">合作地区：全国</div>
-								<div className="effective-time fr fontsize28">有效时间：2017.05.08</div>
+							{ props.budget !== "" && <div className="fl">预算：<span className="budget fontsize28">{props.budget}</span></div> }
+								<div className="effective-time fr">有效时间：{props.valid_time}</div>
 							</div>
 						</div>
 					</div>
@@ -70,53 +50,115 @@ class CompanyInfo extends Component{
 
 				<div className="company-intr">
 					<div className="intr fontsize30">公司介绍</div>
-					<div className="content">差距啊圣诞节啊哈阿斯顿回家啊啊圣诞节啊哈说的话就啊的话阿斯顿回家啊好多阿斯顿回家啊说阿斯顿回家啊说的话阿斯顿回家啊说阿斯顿回家啊说</div>
+					<div className="content">{props.company_describe}</div>
 				</div>
 
 			</div>
-		)
-	}
+		) 
+	} 
 }
+
+
 
 class TabBlock extends Component {
 	constructor(){
 		super();
 		this.state = {
-			isDisplay : true
+			isDisplay : true //显示状态
 		}
 	}
+	//点击切换tab
 	handleClick(){
-
 		this.setState({
-
 			isDisplay : !this.state.isDisplay
-
 		})
 	}
 	render(){
 		let {isDisplay} = this.state;
+		const props = this.props;
 		return (
-			<div className="tab-wrap">
-				<div className="tab-nav">
-					<div className={classnames("nav-item provide fontsize30",{"current-nav" :isDisplay})} onClick={!isDisplay ? this.handleClick.bind(this) : ""}>我们提供</div>
-					<div className={classnames("nav-item need fontsize30",{"current-nav" :!isDisplay}) } onClick={isDisplay ? this.handleClick.bind(this) : ""}>我们需要</div>
+			<div className="tab-wrap"> 
+				<div className="tab-nav"> 
+				{ props.supply && props.need && <div>
+						<div className={classnames("nav-item provide fontsize30",{"current-nav" :isDisplay})} onClick={!isDisplay ? this.handleClick.bind(this) : ""}>我们提供</div>
+						<div className={classnames("nav-item need fontsize30",{"current-nav" :!isDisplay}) } onClick={isDisplay ? this.handleClick.bind(this) : ""}>我们需要</div>
+					</div> }
+					{ (props.supply && !props.need) && <div className="nav-item need fontsize30" style={{"width":"100%"}}>我们提供</div> }
+					{ (!props.supply && props.need) && <div className="nav-item need fontsize30" style={{"width":"100%"}}>我们需要</div> }
 				</div>
-				<div className="tab-content fontsize28">
-					<div className={classnames("content-item ",{"current-content":isDisplay})} >
-						阿斯顿回家的话阿斯顿回家的话阿斯顿回家啊电话sad 回家啊说的话大会sad 回家啊电话阿斯顿回家的话阿斯顿回家的话阿斯顿回家啊电话sad阿斯顿回家的话阿斯顿回家的话阿斯顿回家啊电话sad阿斯顿回家的话阿斯顿回家的话阿斯顿回家啊电话sad
-					</div>
-					<div className={classnames("content-item ",{"current-content":!isDisplay})} >
-						1232阿斯顿回家的话阿斯顿回家的话阿斯顿回家啊电话sad 回家啊说的话大会sad 回家啊电话
-					</div>
+				<div  className="tab-content fontsize28">
+					{ props.supply && props.need && <div>
+						<div className={classnames("content-item ",{"current-content":isDisplay})} >
+							{props.supply}
+						</div>
+						<div className={classnames("content-item ",{"current-content": !isDisplay})} >
+							{props.need}
+						</div>
+					</div>}
+					{ (props.supply && !props.need) && <div className="content-item" style={{"display":"block"}}>{props.supply}</div> }
+					{ (!props.supply && props.need) && <div className="content-item" style={{"display":"block"}}>{props.need}</div> }
 				</div>
+
 				<div className="tab-footer">
 					<div className="container fr fontsize24">
 						<span><i className="iconfont fontsize24">&#xe61a;</i></span>
-						<span className="coop"><i className="iconfont fontsize30">&#xe62d;</i>4222</span>
-						<span className="see"><i className="iconfont fontsize30">&#xe700;</i>2222</span>
+						<span className="coop"><i className="iconfont fontsize30">&#xe62d;</i>{props.cq}</span>
+						<span className="see"><i className="iconfont fontsize30">&#xe6ac;</i>{props.pv}</span>
 					</div>
 				</div>
-			</div>	
+			</div>	 
+		)
+	}
+} 
+ 
+const PlaceholderComponent = ( props ) => (
+	<div className="img-placeholder">微 耀</div>
+)
+
+export default class DetailsPage extends Component {
+	componentDidMount(){
+		const pageId = this.props.location.query.id,
+			  { fetchData } = this.props.actions;
+		//拉取数据
+		const { entryPage } = this.props.location.query;
+		const { imghost } = this.props.uploadToken;
+		!imghost && fetchData( "GET_IMGHOST", "getImgHost" );
+		if( entryPage === "homePage" ){
+			fetchData( "GET_DETAILS_DATA", "details", pageId );
+		}else if( entryPage === "sendRecord" ){
+			fetchData( "GET_DETAILS_DATA", "sendRecord_details", pageId );
+		}else if( entryPage === "iRelease" ){
+			fetchData( "GET_DETAILS_DATA", "iRelease_details", pageId );
+		} 
+	}
+	render(){ 
+		const detailsPageData = this.props.detailsPageData.data;
+		const { entryPage } = this.props.location.query;
+		const { imghost } = this.props.uploadToken;
+		let bottomBtn = '';
+		if( entryPage === "homePage" && detailsPageData.is_req ){
+			bottomBtn = <Link to={`/request?id=${detailsPageData.id}`} className="btn fontsize36"><i className="iconfont fontsize44">&#xe763;</i>合作请求</Link>
+		}else if( entryPage === "sendRecord" ){
+			bottomBtn = <div className="surplus fontsize36">{ detailsPageData.status === 1 ? <div>{`${detailsPageData.linkman} | ${detailsPageData.tel}`}</div> : <div>剩余时间：{detailsPageData.remain_time}</div>}</div>
+		}else if( entryPage === "iRelease" ){
+			bottomBtn = detailsPageData["is_expire "] ? ( ( detailsPageData.cq > 0 ) ? <div className="btn fontsize36">{detailsPageData.linkman+detailsPageData.tel}</div> : <div className="surplus fontsize36">已过期</div> ) :  <div className="surplus fontsize36">剩余时间：{detailsPageData.remain_time}天</div>
+		}  
+		return ( 
+			<div className="details-page">
+				{ detailsPageData.imgurl &&<div className="cover">
+					 <LazyLoad placeholder={<PlaceholderComponent />}>
+						<img src={`${imghost}${detailsPageData.imgurl}`} alt="头像" />
+					</LazyLoad>
+				</div> }
+				<div className="title-container">
+					<div className="title fontsize30">
+						{`【${detailsPageData.name}】${detailsPageData.title}`}
+					</div>
+				</div>
+				<CompanyInfo {...detailsPageData} />
+				<TabBlock {...detailsPageData} />
+				{ bottomBtn }
+			</div>
 		)
 	}
 }

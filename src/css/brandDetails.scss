@@ -1,0 +1,56 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+
+.brand-details {
+	padding-top: px2Rem(10px);
+	.header {
+		width: px2per(726px);
+		height: px2Rem(354px);
+		background: #fff;
+		box-shadow: 0px 0px px2Rem(10px) #ccc;
+		margin: 0 auto;
+		
+		.left-container{
+			width: px2Rem(230px);
+			height: 100%;
+			position: relative;
+			.logo-container {
+				width: px2Rem(200px);
+				height: px2Rem(200px);
+				background: red;
+				position: absolute;
+				top:50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+		}
+
+		.right-container {
+			height: 100%;
+			padding-left: px2Rem(30px);
+			padding-top: px2Rem(26px);
+			color: $titleFontColor;
+			.txt {
+				padding-top: px2Rem(30px);
+				line-height: 1em;
+			}
+		}
+	}
+
+
+	.brief-introduction {
+		padding: px2Rem(24px);
+		background: #fff;
+		margin-top: px2Rem(18px);
+
+		.title-container {
+			padding-bottom: px2Rem(28px);
+		}
+	}
+}

@@ -1,0 +1,78 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+
+.partake-page {
+
+	.list {
+		
+		.item {
+			margin-top: px2Rem(8px); 
+			background: #fff;
+			.container {
+				padding: px2Rem(30px) px2Rem(26px) px2Rem(18px) px2Rem(32px);
+				border-bottom: 1px solid $borderColor;
+
+				.reprot {
+					width: px2Rem(172px);
+					height: px2Rem(56px);
+					background: $btnBg;
+					text-align: center;
+					line-height: px2Rem(56px);
+					border-radius:px2Rem(10px);
+					color:#fff;
+				}
+			}
+		}
+
+	}
+
+	.footer-container {
+		padding: px2Rem(28px) px2Rem(30px);
+
+		.cooperation {
+			color: #9c8838;
+
+			.line {
+				margin: 0 px2Rem(6px) 0 px2Rem(20px);
+			}
+		}
+
+	}
+
+	.logo-container {
+
+		.logo {
+			width: px2Rem(86px); 
+			height: px2Rem(86px);
+			// background: red;
+			margin-right: px2Rem(30px);
+		}
+
+		.name {
+			color: $titleFontColor;
+		}
+
+		.time {
+			color: $fontColor;
+			padding-top: px2Rem(10px);
+		}
+	}
+
+
+	.info-container {
+		color: $fontColor6;
+		line-height: 1em;
+		padding-top: px2Rem(24px);
+
+		.nature,.scale {
+			padding-top: px2Rem(16px);
+		}
+	}
+}

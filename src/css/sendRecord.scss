@@ -55,5 +55,23 @@
 
 			}
 		}
+
+		.footer-container {
+			
+			.link-man {
+				color: $a6843d;
+			}
+
+			.remaining-time {
+				text-align: right;
+				color: #009cff;
+			}
+
+			.expire {
+				color: #999;
+				text-align: right;
+			}
+		}
+
 	}	
 }

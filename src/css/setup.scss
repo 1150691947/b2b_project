@@ -1,0 +1,49 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+
+.setup-page {
+	padding-top: px2Rem(20px);
+
+	.form-container {
+		background: #fff;
+		padding: 0 px2Rem(8px);
+		.form-item:first-child{
+			border-bottom: 1px solid $borderColor;
+		}
+
+		.form-item {
+			padding: px2Rem(20px);
+
+			input {
+				width: 50%;
+				height: px2Rem(56px);
+			}
+
+			.get-vcode {
+				width: px2Rem(174px);
+				height: px2Rem(56px);
+				background: $btnBg;
+				border-radius: px2Rem(6px);
+				color: #fff; 
+			}
+		}
+	}
+
+
+	.btn {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		height: px2Rem(98px);
+		line-height: px2Rem(98px);
+		text-align: center;
+		color: #fff;
+		background: $btnBg;
+	}
+}

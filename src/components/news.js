@@ -1,10 +1,8 @@
+/*消息页面*/
 import React, { Component } from 'react';
 import { Link } from "react-router";
-
 import "../css/news.css";
-
 import Nav from "./nav";
-
 const ListItem = ( props ) => {
 	return (
 		<li>
@@ -15,19 +13,18 @@ const ListItem = ( props ) => {
 		</li>
 	)
 }
-
+ 
 
 export default class News extends Component {
 	render(){
+		const pathname = this.props.location.pathname;
 		return (
 			<div className="news-page">
-
 				<ul className="menu-list">
-					<ListItem title="发送记录" href="sendRecord" />
-					<ListItem title="邀合作" />
+					<ListItem title="发送合作请求" href="sendRecord" />
+					<ListItem title="收到合作请求" href="invited?state=0" />
 				</ul>
-
-				<Nav />
+				<Nav pathname={pathname} />
 			</div>
 		)
 	}

@@ -1,0 +1,49 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+
+
+.brand-settled {
+
+	.brand-list {
+		width: px2per(722px);
+		margin: 0 auto;
+		padding-top: px2Rem(10px); 
+		.brand-item {
+			display: inline-block;
+			width: px2Rem(355px);
+			height: px2Rem(355px);
+			background: #fff;
+			margin-right: px2Rem(6px);
+			margin-bottom: px2Rem(6px);
+	
+			.logo-container {
+				height: px2Rem(214px);
+				position: relative;
+
+				img {
+					width: 100%;
+					height: 100%; 
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+				}
+			}
+
+			.brand-name {
+				color: $titleFontColor;
+				text-align: center;
+				p {
+					padding-top: px2Rem(24px);
+					line-height: 1em;
+				}
+			}
+		}
+	}
+}

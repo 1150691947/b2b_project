@@ -112,8 +112,7 @@
 .tloader-footer .tloader-btn {
   color: #f2f2f2;
   font-size: .9em;
-  text-align: center;
-  line-height: 3rem; }
+  text-align: center; }
   .state-loading .tloader-footer .tloader-btn {
     display: none; }
 
@@ -179,9 +178,44 @@
             animation: tloader-progressed 1s;
         }*/ }
 
-.banner-container {
-  height: 4rem;
-  background: red; }
+.spinner {
+  margin: 100px auto 0;
+  width: 150px;
+  text-align: center; }
+
+.spinner > div {
+  width: 30px;
+  height: 30px;
+  background-color: #67CF22;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s; }
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s; }
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0); }
+  40% {
+    -webkit-transform: scale(1); } }
+
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
 
 /*列表样式*/
 .item-container {
@@ -189,13 +223,20 @@
   padding-top: 0.32rem;
   background: #fff;
   margin-top: 0.10667rem; }
+  .item-container .img-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #eaeaea;
+    line-height: 2.16rem;
+    font-size: 1.6em;
+    text-align: center;
+    color: #9e9e9e; }
   .item-container .content-container .head-container {
     width: 9.22667rem;
     margin: 0 auto; }
     .item-container .content-container .head-container .logo {
       width: 1.14667rem;
-      height: 1.14667rem;
-      background: #faf88a; }
+      height: 1.14667rem; }
     .item-container .content-container .head-container .center {
       padding-left: 0.45333rem; }
       .item-container .content-container .head-container .center .company-name {
@@ -223,19 +264,39 @@
       width: 9.22667rem;
       margin: 0 auto;
       padding-bottom: 0.26667rem; }
+      .item-container .content-container .body-container .container .icon-budget {
+        display: inline-block;
+        width: 0.45333rem;
+        height: 0.45333rem;
+        background: #ff4c4c;
+        color: #fff;
+        text-align: center;
+        border-radius: 0.06667rem;
+        margin-left: 0.18667rem;
+        vertical-align: top; }
       .item-container .content-container .body-container .container .left {
         width: 6.34667rem; }
         .item-container .content-container .body-container .container .left .title {
           color: #333;
           line-height: 1.5em;
-          min-height: 1.46667rem; }
+          min-height: 1.06667rem;
+          margin-bottom: 0.53333rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical; }
         .item-container .content-container .body-container .container .left .info {
           color: #666;
           padding-top: 0.16rem; }
       .item-container .content-container .body-container .container .cover {
         width: 2.16rem;
-        height: 2.16rem;
-        background: #ccc; }
+        height: 2.16rem; }
+      .item-container .content-container .body-container .container .fade-appear {
+        opacity: 0.01; }
+      .item-container .content-container .body-container .container .fade-appear.fade-appear-active {
+        opacity: 1;
+        transition: opacity .2s ease-in; }
   .item-container .content-container .footer-container {
     width: 9.22667rem;
     margin: 0 auto;
@@ -257,20 +318,22 @@
   height: 1.76rem;
   line-height: 1.76rem;
   border-radius: 100%;
-  background: #d2d2d2;
+  background: #f9d682;
   text-align: center;
   position: fixed;
   right: 1.46667%;
   bottom: 1.49333rem; }
   .edit a {
     display: block;
-    color: #666; }
+    color: #333; }
   .edit .iconfont {
     font-size: 0.93333rem; }
 
 /*列表样式*/
 .tloader {
   padding-bottom: 1.46667rem; }
+  .tloader .tloader-symbol {
+    display: none; }
 
 /*.example-enter {
   opacity: 0.01;

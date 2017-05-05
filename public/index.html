@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!--
       Notice the use of %PUBLIC_URL% in the tag above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -12,10 +13,106 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>vveyo</title>
+    <title>商业对接</title>
     <script src="%PUBLIC_URL%/flexible.js"></script>
-  </head>
-  <body>
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    @-webkit-keyframes ball-spin-fade-loader {
+      50% {
+        opacity: 0.3;
+        -webkit-transform: scale(0.4);
+                transform: scale(0.4); }
+      100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1); } }
+
+    @keyframes ball-spin-fade-loader {
+      50% {
+        opacity: 0.3;
+        -webkit-transform: scale(0.4);
+                transform: scale(0.4); }
+      100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1); } }
+    .hide {
+      display: none;
+    }
+
+    .ball-spin-fade-loader {
+      position: relative;
+      top: -10px;
+      left: -10px; }
+      .ball-spin-fade-loader > div:nth-child(1) {
+        top: .3333333rem;
+        left: 0;
+        -webkit-animation: ball-spin-fade-loader 1s -0.96s infinite linear;
+                animation: ball-spin-fade-loader 1s -0.96s infinite linear; }
+      .ball-spin-fade-loader > div:nth-child(2) {
+        /*17.04545px*/
+        top: .22727266667rem;
+        left: .22727266667rem;
+        -webkit-animation: ball-spin-fade-loader 1s -0.84s infinite linear;
+                animation: ball-spin-fade-loader 1s -0.84s infinite linear; }
+      .ball-spin-fade-loader > div:nth-child(3) {
+        top: 0;
+        left: .3333333rem;
+        -webkit-animation: ball-spin-fade-loader 1s -0.72s infinite linear;
+                animation: ball-spin-fade-loader 1s -0.72s infinite linear; }
+      .ball-spin-fade-loader > div:nth-child(4) {
+        top: -.22727266667rem;
+        left: .22727266667rem;
+        -webkit-animation: ball-spin-fade-loader 1s -0.6s infinite linear;
+                animation: ball-spin-fade-loader 1s -0.6s infinite linear; }
+      .ball-spin-fade-loader > div:nth-child(5) {
+        top: -.3333333rem;
+        left: 0;
+        -webkit-animation: ball-spin-fade-loader 1s -0.48s infinite linear;
+                animation: ball-spin-fade-loader 1s -0.48s infinite linear; }
+      .ball-spin-fade-loader > div:nth-child(6) {
+        top: -.22727266667rem;
+        left: -.22727266667rem;
+        -webkit-animation: ball-spin-fade-loader 1s -0.36s infinite linear;
+                animation: ball-spin-fade-loader 1s -0.36s infinite linear; }
+      .ball-spin-fade-loader > div:nth-child(7) {
+        top: 0;
+        left: -.3333333rem;
+        -webkit-animation: ball-spin-fade-loader 1s -0.24s infinite linear;
+                animation: ball-spin-fade-loader 1s -0.24s infinite linear; }
+      .ball-spin-fade-loader > div:nth-child(8) {
+        top: .22727266667rem;
+        left: -.22727266667rem;
+        -webkit-animation: ball-spin-fade-loader 1s -0.12s infinite linear;
+                animation: ball-spin-fade-loader 1s -0.12s infinite linear; }
+      .ball-spin-fade-loader > div {
+        background-color: #999;
+        width: .2rem;
+        height: .2rem;
+        border-radius: 100%;
+        margin: 2px;
+        -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+        position: absolute; }
+    </style>
+    <script>
+      var _PageHeight = document.documentElement.clientHeight,
+          _PageWidth = document.documentElement.clientWidth;
+      //计算loading框距离顶部和左部的距离（loading框的宽度为215px，高度为61px）
+      var _LoadingTop = _PageHeight > 61 ? (_PageHeight - 61) / 2 : 0,
+          _LoadingLeft = _PageWidth > 215 ? (_PageWidth - 215) / 2 : 0;
+      //在页面未加载完毕之前显示的loading Html自定义内容
+      var _LoadingHtml = '<div id="loadingDiv" style="background:#fff;position:relative;width:'+_PageWidth+'px;height:'+_PageHeight+'px" class="loader"><div class="loader-inner ball-spin-fade-loader" style="display: inline-block;position:absolute;top:50%;left: 50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);" ><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>';
+      //呈现loading效果
+
+      document.write(_LoadingHtml);
+
+    </script>
+  </head> 
+  <body style="overflow:hidden;">
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -25,7 +122,7 @@
       The build step will place the bundled scripts into the <body> tag.
 
       To begin the development, run `npm start`.
-      To create a production bundle, use `npm run build`.
+      To create a production bundle, use `npm run build`. 
     -->
   </body>
 </html>

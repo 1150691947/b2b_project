@@ -13,8 +13,8 @@
 
 	.item {
 		display: inline-block;
-		min-width: px2Rem(238px);
-		height: px2Rem(78px);
+		width: px2Rem(248px);
+		// height: px2Rem(78px);
 		line-height: px2Rem(78px);
 		text-align: center;
 		border-radius: px2Rem(10px);
@@ -29,4 +29,4 @@
 		background-color:$industryItemCheckedBG;
 		color: #fff;
 	}
-}  
+}   

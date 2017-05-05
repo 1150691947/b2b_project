@@ -1,17 +1,13 @@
-.example-enter {
-  opacity: 0.01;
-  transition: opacity .5s ease-in;
+.load-tip {
+	text-align: center;
+	color: #666;
 }
 
-.example-enter.example-enter-active {
-  opacity: 1;
-}
-
-.example-leave {
-  opacity: 1;
-  transition: opacity .5s ease-in;
-}
-
-.example-leave.example-leave-active {
-  opacity: 0;
-} 
+// @media screen and (orientation: portrait) {
+//   /*竖屏 css*/
+  	
+// }
+// @media screen and (orientation: landscape) {
+//   /*横屏 css*/
+  
+// }

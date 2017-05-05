@@ -1,0 +1,106 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+
+.upload-info {
+	background: #9b9b9b;
+	.label-block {
+		width: 100%;
+		height: px2Rem(60px);
+		line-height: px2Rem(60px);
+		text-align: center;
+		color: #fff;
+		background: #ff6767;
+	}
+
+	.tabs-container {
+		height: px2Rem(864px);
+
+		.tip-block {
+			height: px2Rem(98px);
+			line-height: px2Rem(98px);
+			text-align: center;
+			color: $titleFontColor;
+			background: #fff;
+		}
+		//内容样式
+		.content-item {
+			height: px2Rem(614px);
+			background: transparent;
+			position: relative;
+
+			.img {
+				margin: 0 auto; 
+			}
+		}
+
+		.business {
+			padding-top: px2Rem(250px);
+			.img {
+				width: px2Rem(436px);
+				height: px2Rem(264px);
+			}
+		}
+
+		.employee {
+			padding-top: px2Rem(90px);
+
+			.img {
+				width: px2Rem(307px);
+				height: px2Rem(430px);
+			}
+		}
+
+		.prove {
+			padding-top: px2Rem(62px);
+
+			.img {
+				width: px2Rem(593px);
+				height: px2Rem(499px);
+			}
+		}
+
+		.zz {
+			padding-top: px2Rem(108px);
+
+			.img {
+				width: px2Rem(349px);
+				height: px2Rem(465px); 
+			}
+		}
+
+		.tip-text {
+			width: px2Rem(570px);
+			text-align: center;
+			color: #fff;
+			margin: 0 auto;
+		}
+	}
+
+	.select-uploadmode {
+		background: #fff;
+
+		.mode-item,.dropzone {
+			height: px2Rem(96px);
+			line-height: px2Rem(96px);
+			text-align: center;
+			color: $titleFontColor;
+			border-bottom: 1px solid $borderColor;
+			position: relative;
+
+			.file {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				opacity: 0;
+			}
+		}
+	}
+} 

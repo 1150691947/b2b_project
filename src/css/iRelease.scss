@@ -1,0 +1,81 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+
+.iRelease-page {
+
+
+	.item {
+		margin-top: px2Rem(6px);
+		background: #fff;	
+	
+		.header-container {
+			width: px2per(689px);
+			margin: 0 auto;
+			padding-top: px2Rem(14px);
+			line-height: px2Rem(60px);
+			color: $titleFontColor;
+
+			.btn {
+				width: px2Rem(162px);
+				background: $btnBg;
+				color: #fff;
+				text-align: center;
+				border-radius: px2Rem(5px);
+			}
+		}
+
+		.img-placeholder {
+	        width: 100%;
+	        height: 100%;
+	        background: #eaeaea;
+	        line-height: px2Rem(162px);
+	        font-size: 1.6em;
+	        text-align: center;
+	        color: #9e9e9e;
+	    } 
+
+		.container {
+			padding: px2Rem(16px) px2Rem(30px) px2Rem(26px) px2Rem(30px);
+			border-bottom: 1px solid $borderColor;
+
+			.title {
+				width: px2per(496px);
+				color: $titleFontColor;
+			}
+
+			.logo {
+				width: px2Rem(162px);
+				height: px2Rem(162px);
+				// background:#faafaa;
+			}
+		}
+
+		.footer-container {
+			padding: px2Rem(28px) px2Rem(30px);
+
+			.cooperation {
+				color: #9c8838;
+
+				.line {
+					margin: 0 px2Rem(6px) 0 px2Rem(20px);
+				}
+			}
+
+			.overdue {
+				color: $fontColor;
+			}
+
+			.remain-time {
+				color: #ff3f63;
+				text-align: right;
+			}
+		}
+	}
+}

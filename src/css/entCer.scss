@@ -1,0 +1,40 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+.ent-cer {
+	padding-bottom: px2Rem(110px);
+	.header {
+		height: px2Rem(322px);
+		padding-top: px2Rem(30px);
+		border-bottom: px2Rem(16px) solid #f5f5f5;
+		.logo-upload {
+			width: px2Rem(200px);
+			height: px2Rem(200px);
+			margin: 0 auto;
+			background: #eee;
+			text-align: center;
+			line-height: px2Rem(200px);
+			color: #cdcdcd;
+			position: relative;
+
+			img{ 
+				position: absolute;
+				top: 0;
+				left: 0;
+				object-fit: contain;
+			}
+		}
+
+		.tip {
+			height: px2Rem(80px);
+			line-height: px2Rem(80px);
+			text-align: center; 
+			color: #575757;
+		}
+	}
+}

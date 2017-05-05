@@ -1,0 +1,18 @@
+.success-cooper .hide {
+  display: none; }
+
+.success-cooper .tab-container {
+  width: 100%;
+  padding: 0.24rem 0;
+  background: #fff; }
+  .success-cooper .tab-container .tab {
+    width: 50%;
+    height: 0.77333rem;
+    line-height: 0.77333rem;
+    text-align: center;
+    display: inline-block;
+    color: #999; }
+    .success-cooper .tab-container .tab:last-child {
+      border-left: 1px solid #e0e0e0; }
+    .success-cooper .tab-container .tab.active {
+      color: #333; }

@@ -16,6 +16,14 @@ $btnLoadMore: '加载更多';
 $btnLoadMore: '没有更多';
 $transition-duration: .2s;
 
+
+// @function px2Rem( $px ){
+//     @return $px / $rootFontSize * 1rem
+// }
+
+// @function px2per( $px, $px2:750px ){
+//     @return ($px / $px2) * 100%; 
+// }
 .tloader-msg:after{
     .state-pulling &{
         content: $pullingMsg
@@ -176,7 +184,7 @@ $transition-duration: .2s;
         color: $btnColor;
         font-size: .9em;
         text-align: center;
-        line-height: 3rem;
+        // line-height: 1rem;
 
         .state-loading &{
             display: none;

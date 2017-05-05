@@ -1,19 +1,20 @@
 .nav-list {
   width: 100%;
-  height: 1.33333rem;
-  background: #282828;
+  height: 1.30667rem;
+  background: #fff;
   position: fixed;
   bottom: 0;
   left: 0; }
   .nav-list .nav-item {
-    width: 33.33333%;
+    width: 25%;
     display: inline-block;
     text-align: center; }
     .nav-list .nav-item a {
       color: #c4c4c4; }
     .nav-list .nav-item .icon {
-      padding: 0.13333rem 0; }
+      padding: 0.22667rem 0 0.21333rem;
+      line-height: 1em; }
     .nav-list .nav-item p {
       line-height: 1em; }
     .nav-list .nav-item .active {
-      color: #fff; }
+      color: #d4b260; }

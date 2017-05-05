@@ -1,0 +1,64 @@
+.upload-info {
+  background: #9b9b9b; }
+  .upload-info .label-block {
+    width: 100%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    color: #fff;
+    background: #ff6767; }
+  .upload-info .tabs-container {
+    height: 11.52rem; }
+    .upload-info .tabs-container .tip-block {
+      height: 1.30667rem;
+      line-height: 1.30667rem;
+      text-align: center;
+      color: #333;
+      background: #fff; }
+    .upload-info .tabs-container .content-item {
+      height: 8.18667rem;
+      background: transparent;
+      position: relative; }
+      .upload-info .tabs-container .content-item .img {
+        margin: 0 auto; }
+    .upload-info .tabs-container .business {
+      padding-top: 3.33333rem; }
+      .upload-info .tabs-container .business .img {
+        width: 5.81333rem;
+        height: 3.52rem; }
+    .upload-info .tabs-container .employee {
+      padding-top: 1.2rem; }
+      .upload-info .tabs-container .employee .img {
+        width: 4.09333rem;
+        height: 5.73333rem; }
+    .upload-info .tabs-container .prove {
+      padding-top: 0.82667rem; }
+      .upload-info .tabs-container .prove .img {
+        width: 7.90667rem;
+        height: 6.65333rem; }
+    .upload-info .tabs-container .zz {
+      padding-top: 1.44rem; }
+      .upload-info .tabs-container .zz .img {
+        width: 4.65333rem;
+        height: 6.2rem; }
+    .upload-info .tabs-container .tip-text {
+      width: 7.6rem;
+      text-align: center;
+      color: #fff;
+      margin: 0 auto; }
+  .upload-info .select-uploadmode {
+    background: #fff; }
+    .upload-info .select-uploadmode .mode-item, .upload-info .select-uploadmode .dropzone {
+      height: 1.28rem;
+      line-height: 1.28rem;
+      text-align: center;
+      color: #333;
+      border-bottom: 1px solid #e0e0e0;
+      position: relative; }
+      .upload-info .select-uploadmode .mode-item .file, .upload-info .select-uploadmode .dropzone .file {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0; }

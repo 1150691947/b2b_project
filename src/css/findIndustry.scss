@@ -6,4 +6,19 @@
 
 @function px2per( $px, $px2:750px ){
 	@return ($px / $px2) * 100%; 
+} 
+
+.find-industry {
+	padding-bottom: px2Rem(110px);
+	.btn {
+		width: 100%;
+		height: px2Rem(98px);
+		line-height: px2Rem(98px);
+		background: $btnBg;
+		text-align: center;
+		color: #fff;
+		margin-top: px2Rem(20px);
+		position: fixed;
+		bottom: 0;
+	}
 }

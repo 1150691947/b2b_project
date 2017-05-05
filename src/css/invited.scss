@@ -1,0 +1,155 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+
+$bg: #fff;
+
+.invited-page {
+	padding-bottom: px2Rem(8px);
+	.label-block {
+		width: 100%;
+		height: px2Rem(60px);
+		line-height: px2Rem(60px);
+		text-align: center;
+		color: #fff;
+		background: #ff6767;
+	}
+
+	 
+	.list {
+		display: none;
+	}
+
+	.list-active {
+		display: block;
+	}	
+
+	.tab-menu {
+		width: 100%;
+		height: px2Rem(94px); 
+		line-height: px2Rem(94px);	
+		color: $fontColor6;
+		background: $bg;	
+
+		.menu-item {
+			width: 50%;
+			display: inline-block;
+			text-align: center;
+		}
+
+		.active {
+			color: $titleFontColor;
+		}
+	}
+
+	.invited-item {
+		background:$bg;
+
+		a {
+			display: block;
+		}
+
+		.container {
+			margin-top: px2Rem(10px);
+			padding: px2Rem(22px) px2Rem(24px) px2Rem(12px) px2Rem(30px);
+ 
+			.agree {
+				width: px2Rem(172px);
+				height: px2Rem(52px);
+				line-height: px2Rem(52px);
+				text-align: center;
+				background: $btnBg;
+				border-radius: px2Rem(10px);
+				color: #fff;
+			}
+
+			.textarea-container {
+				width: 100%;
+				min-height: px2Rem(144px);
+				background: #f5f5f5;
+				margin-top: px2Rem(14px);
+				padding:px2Rem(8px);
+				color: $fontColor6; 
+			}	
+
+			.rem-time {
+				text-align: right;
+				color: $a6843d;
+			}
+
+			.tigong {
+				color: $titleFontColor; 
+				.title{
+					padding-top: px2Rem(20px);
+				}
+				.content {
+					padding-top: px2Rem(20px);
+					line-height: 1.5em;
+				}
+			}
+		}
+
+		.i-release {
+			padding: px2Rem(12px) px2Rem(16px) px2Rem(24px) px2Rem(22px);
+			margin: 0 px2Rem(8px);
+			border-top: 1px solid $borderColor;
+	
+			.text {
+				padding-bottom: px2Rem(12px);
+				color: $a6843d;
+			}
+
+			.desc {
+				line-height: 1.4em;
+				color: $titleFontColor;
+			}
+		}
+
+		.footer {
+			height: px2Rem(94px);
+			line-height: px2Rem(94px);
+			margin: 0 px2Rem(8px);
+			border-top: 1px solid $borderColor;
+			padding-left: px2Rem(22px);
+			color: $a6843d;
+		}
+	}
+	 
+
+
+	.logo-container {
+
+		.logo {
+			width: px2Rem(86px); 
+			height: px2Rem(86px);
+			// background: red;
+			margin-right: px2Rem(30px);
+		}
+
+		.name {
+			color: $titleFontColor;
+		}
+
+		.time {
+			color: $fontColor;
+			padding-top: px2Rem(10px);
+		}
+	}
+
+
+	.info-container {
+		color: $fontColor6;
+		line-height: 1em;
+		padding-top: px2Rem(20px);
+
+		.nature,.scale {
+			padding-top: px2Rem(16px);
+		}
+	}
+}
+

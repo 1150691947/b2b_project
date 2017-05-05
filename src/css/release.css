@@ -1,22 +1,41 @@
 @charset "UTF-8";
 .release-page {
   background: #fff; }
+  .release-page .label-block {
+    width: 100%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    color: #fff;
+    background: #ff6767; }
   .release-page .info-item {
     width: 97.86667%;
     min-height: 1.12rem;
-    line-height: 1.12rem;
     padding: 0 0.26667rem;
+    line-height: 1.12rem;
     margin: 0 auto;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #c3c3c3;
     display: flex;
     justify-content: space-between;
     color: #333; }
+    .release-page .info-item input {
+      text-align: right;
+      flex-grow: 2; }
     .release-page .info-item .right {
-      width: 70%;
-      padding-top: 0.08rem; }
+      width: 60%;
+      position: relative; }
+      .release-page .info-item .right input {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%); }
       .release-page .info-item .right textarea {
         width: 100%;
-        font-size: 0.4rem; }
+        font-size: 0.4rem;
+        margin-top: 0.18667rem; }
+    .release-page .info-item .t-r {
+      text-align: right; }
   .release-page .radio-container .label {
     position: relative; }
     .release-page .radio-container .label input[type="radio"] {
@@ -55,6 +74,107 @@
       width: 100%;
       height: 100%;
       display: block;
-      padding: 0.05333rem 0.08rem; }
+      padding: 0.05333rem 0.08rem;
+      text-align: left; }
+  .release-page .textarea-container {
+    padding: 0 0.10667rem;
+    color: #333; }
+    .release-page .textarea-container .container {
+      height: 1.06667rem;
+      overflow: hidden;
+      padding: 0 0.26667rem;
+      border-bottom: 1px solid #e0e0e0;
+      transition: height .3s; }
+    .release-page .textarea-container .open {
+      height: 3.73333rem; }
+    .release-page .textarea-container .header {
+      padding-top: 0.13333rem;
+      padding-bottom: 0.18667rem; }
+    .release-page .textarea-container .title {
+      height: 0.66667rem;
+      line-height: 0.66667rem; }
+    .release-page .textarea-container .textarea {
+      border-radius: 0.13333rem;
+      background: #f4f4f4;
+      height: 2.18667rem;
+      padding: 0.08rem;
+      margin-top: 0.10667rem;
+      margin-bottom: 0.4rem; }
+      .release-page .textarea-container .textarea textarea {
+        width: 100%;
+        height: 100%; }
+    .release-page .textarea-container .toggle {
+      width: 1.2rem;
+      height: 0.66667rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 0.32rem;
+      box-shadow: 0 0 0.08rem #ccc;
+      position: relative;
+      transition: background .3s; }
+      .release-page .textarea-container .toggle .round {
+        width: 0.66667rem;
+        height: 0.66667rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 100%;
+        position: absolute;
+        left: -0.02667rem;
+        background: #fff;
+        transition: left .3s; }
+    .release-page .textarea-container .toggle-right {
+      background: #45e199; }
+      .release-page .textarea-container .toggle-right .round {
+        left: 0.58667rem; }
+  .release-page .btn {
+    width: 100%;
+    height: 1.30667rem;
+    line-height: 1.30667rem;
+    text-align: center;
+    color: #fff;
+    background: #2a2a2a; }
+  .release-page .upload-container {
+    padding: 0.58667rem 0.48rem 1.46667rem;
+    background: #f5f5f5;
+    position: relative; }
+    .release-page .upload-container .upload-btn, .release-page .upload-container .dropzone {
+      width: 2.42667rem;
+      height: 2.42667rem;
+      line-height: 2.42667rem;
+      border: 1px solid #999;
+      border-radius: 0.13333rem;
+      background: #e2e2e2;
+      position: relative;
+      text-align: center;
+      float: left; }
+      .release-page .upload-container .upload-btn input[type="file"], .release-page .upload-container .dropzone input[type="file"] {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0; }
+      .release-page .upload-container .upload-btn .iconfont, .release-page .upload-container .dropzone .iconfont {
+        font-size: 1.33333rem;
+        color: #999; }
+    .release-page .upload-container .tip {
+      width: 2.42667rem;
+      height: 2.42667rem;
+      line-height: 2.42667rem;
+      text-align: center;
+      position: absolute;
+      left: 3.76rem;
+      z-index: 2;
+      opacity: .8; }
+    .release-page .upload-container .img-container {
+      width: 2.42667rem;
+      height: 2.42667rem;
+      position: relative; }
+      .release-page .upload-container .img-container .iconfont {
+        position: absolute;
+        top: -0.4rem;
+        right: -0.26667rem;
+        color: #999;
+        z-index: 3; }
 
 /*日期选择样式*/
+.datepicker {
+  font-size: 1em; }

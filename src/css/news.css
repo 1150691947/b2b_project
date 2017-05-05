@@ -1,13 +1,13 @@
-.news-page {
-  padding-top: 0.53333rem; }
-  .news-page .menu-list {
-    padding: 0 0.16rem 0 0.08rem;
-    background: #fff; }
-    .news-page .menu-list .menu-item {
-      display: flex;
-      justify-content: space-between;
-      height: 1.2rem;
-      line-height: 1.2rem;
-      border-bottom: 1px solid #e0e0e0;
-      padding: 0 0.29333rem;
-      color: #333; }
+.news-page .menu-list {
+  padding: 0 0.16rem 0 0.08rem;
+  background: #fff; }
+  .news-page .menu-list .menu-item {
+    display: flex;
+    justify-content: space-between;
+    height: 1.46667rem;
+    line-height: 1.46667rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 0.29333rem;
+    color: #333; }
+  .news-page .menu-list li:last-child a {
+    border-bottom: none; }

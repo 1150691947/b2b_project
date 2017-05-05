@@ -1,0 +1,22 @@
+html, body, #root, .App {
+  height: 100%; }
+
+.success-page {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  text-align: center; }
+  .success-page .iconfont {
+    font-size: 2.93333rem;
+    color: #38c26c; }
+  .success-page .tip {
+    color: #333; }
+  .success-page .btn {
+    display: block;
+    width: 77.06667%;
+    height: 1.06667rem;
+    line-height: 1.06667rem;
+    background: #2a2a2a;
+    margin: 0.61333rem auto 0;
+    color: #fff;
+    border-radius: 0.13333rem; }

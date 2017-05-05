@@ -1,25 +1,36 @@
 @import "./cssreset.css";
-
-body {
-  margin: 0;
-  padding: 0;
-  background: #f5f5f5;
-  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+@import "./publicVar.scss";
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
 }
-
+@function px2per( $px, $px2:750px ){
+    @return ($px / $px2) * 100%; 
+}
+body {
+  width: px2Rem(750px);
+  // height: auto;   
+  margin: 0 auto;
+  padding: 0;
+  background: #f5f5f5; 
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+} 
 
 @font-face {
   font-family: 'iconfont';  /* project id 248308 */
-  src: url('//at.alicdn.com/t/font_jfmhhzscsfbf0f6r.eot');
-  src: url('//at.alicdn.com/t/font_jfmhhzscsfbf0f6r.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_jfmhhzscsfbf0f6r.woff') format('woff'),
-  url('//at.alicdn.com/t/font_jfmhhzscsfbf0f6r.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_jfmhhzscsfbf0f6r.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_qogimkbzerejyvi.eot');
+  src: url('//at.alicdn.com/t/font_qogimkbzerejyvi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_qogimkbzerejyvi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_qogimkbzerejyvi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_qogimkbzerejyvi.svg#iconfont') format('svg');
+}
+
+img {
+  object-fit:cover; //图片按容器比例缩放
 }
 .iconfont{
     font-family:"iconfont" !important;
     font-size:16px;font-style:normal;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; 
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
 }

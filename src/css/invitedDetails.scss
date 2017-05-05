@@ -1,0 +1,103 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+
+
+.invited-details {
+
+	.label-block {
+		width: 100%;
+		height: px2Rem(60px);
+		line-height: px2Rem(60px);
+		text-align: center;
+		color: #fff;
+		background: #ff6767;
+	}
+
+	.container,.introduce {
+		background: #Fff;
+	}
+	
+	.container {
+		padding: px2Rem(30px) px2Rem(26px) px2Rem(30px) px2Rem(32px);
+		.rem-time {
+			text-align: right;
+			color: $a6843d;
+		} 
+	}
+
+	//公司介绍
+	.introduce {
+		padding: px2Rem(28px) px2Rem(30px) px2Rem(40px);
+		background: #fff;
+		border-top: 1px solid $borderColor;
+		color: $titleFontColor;
+
+		.title {
+			padding-bottom: px2Rem(22px);
+		}
+
+		.desc {
+			line-height: 1.5em;
+		}
+	}
+
+
+	.btn-cont {
+		width: 100%;
+		height: px2Rem(98px);
+		line-height: px2Rem(98px);
+		text-align: center;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		color: #fff;
+		.btn {
+			width: 50%;
+			display: inline-block;
+		}
+
+		.left-btn {
+			background: #999;
+		}
+		
+		.right-btn {
+			background: $btnBg;
+		}
+	}
+
+	.logo-container {
+ 
+		.logo {
+			width: px2Rem(86px); 
+			height: px2Rem(86px);
+			margin-right: px2Rem(30px);
+		}
+
+		.name {
+			color: $titleFontColor;
+		}
+
+		.time {
+			color: $fontColor;
+			padding-top: px2Rem(10px);
+		}
+	}
+
+
+	.info-container {
+		color: $fontColor6;
+		line-height: 1em;
+		padding-top: px2Rem(24px);
+
+		.nature,.scale {
+			padding-top: px2Rem(16px);
+		}
+	}
+}

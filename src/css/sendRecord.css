@@ -23,3 +23,14 @@
     padding-top: 0.32rem; }
     .send-record .item .body-container .label .industry {
       margin-right: 21.33333%; }
+
+.send-record .item .footer-container .link-man {
+  color: #a6843d; }
+
+.send-record .item .footer-container .remaining-time {
+  text-align: right;
+  color: #009cff; }
+
+.send-record .item .footer-container .expire {
+  color: #999;
+  text-align: right; }

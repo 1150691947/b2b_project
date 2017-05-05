@@ -1,0 +1,89 @@
+.invited-page {
+  padding-bottom: 0.10667rem; }
+  .invited-page .label-block {
+    width: 100%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    color: #fff;
+    background: #ff6767; }
+  .invited-page .list {
+    display: none; }
+  .invited-page .list-active {
+    display: block; }
+  .invited-page .tab-menu {
+    width: 100%;
+    height: 1.25333rem;
+    line-height: 1.25333rem;
+    color: #666;
+    background: #fff; }
+    .invited-page .tab-menu .menu-item {
+      width: 50%;
+      display: inline-block;
+      text-align: center; }
+    .invited-page .tab-menu .active {
+      color: #333; }
+  .invited-page .invited-item {
+    background: #fff; }
+    .invited-page .invited-item a {
+      display: block; }
+    .invited-page .invited-item .container {
+      margin-top: 0.13333rem;
+      padding: 0.29333rem 0.32rem 0.16rem 0.4rem; }
+      .invited-page .invited-item .container .agree {
+        width: 2.29333rem;
+        height: 0.69333rem;
+        line-height: 0.69333rem;
+        text-align: center;
+        background: #2a2a2a;
+        border-radius: 0.13333rem;
+        color: #fff; }
+      .invited-page .invited-item .container .textarea-container {
+        width: 100%;
+        min-height: 1.92rem;
+        background: #f5f5f5;
+        margin-top: 0.18667rem;
+        padding: 0.10667rem;
+        color: #666; }
+      .invited-page .invited-item .container .rem-time {
+        text-align: right;
+        color: #a6843d; }
+      .invited-page .invited-item .container .tigong {
+        color: #333; }
+        .invited-page .invited-item .container .tigong .title {
+          padding-top: 0.26667rem; }
+        .invited-page .invited-item .container .tigong .content {
+          padding-top: 0.26667rem;
+          line-height: 1.5em; }
+    .invited-page .invited-item .i-release {
+      padding: 0.16rem 0.21333rem 0.32rem 0.29333rem;
+      margin: 0 0.10667rem;
+      border-top: 1px solid #e0e0e0; }
+      .invited-page .invited-item .i-release .text {
+        padding-bottom: 0.16rem;
+        color: #a6843d; }
+      .invited-page .invited-item .i-release .desc {
+        line-height: 1.4em;
+        color: #333; }
+    .invited-page .invited-item .footer {
+      height: 1.25333rem;
+      line-height: 1.25333rem;
+      margin: 0 0.10667rem;
+      border-top: 1px solid #e0e0e0;
+      padding-left: 0.29333rem;
+      color: #a6843d; }
+  .invited-page .logo-container .logo {
+    width: 1.14667rem;
+    height: 1.14667rem;
+    margin-right: 0.4rem; }
+  .invited-page .logo-container .name {
+    color: #333; }
+  .invited-page .logo-container .time {
+    color: #999;
+    padding-top: 0.13333rem; }
+  .invited-page .info-container {
+    color: #666;
+    line-height: 1em;
+    padding-top: 0.26667rem; }
+    .invited-page .info-container .nature, .invited-page .info-container .scale {
+      padding-top: 0.21333rem; }

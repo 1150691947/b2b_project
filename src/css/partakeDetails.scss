@@ -1,0 +1,113 @@
+@import "./publicVar.scss";
+
+@function px2Rem( $px ){
+    @return $px / $rootFontSize * 1rem
+}
+
+@function px2per( $px, $px2:750px ){
+	@return ($px / $px2) * 100%; 
+}
+
+
+.partakeDetails-page {
+	
+	.container {
+		padding: px2Rem(30px) px2Rem(26px) px2Rem(30px) px2Rem(32px);
+		background: #fff;
+
+		.reprot {
+			width: px2Rem(172px);
+			height: px2Rem(56px);
+			background: $btnBg;
+			text-align: center;
+			line-height: px2Rem(56px); 
+			border-radius:px2Rem(10px);
+			color:#fff;
+		}
+	}
+	//公司介绍
+	.introduce {
+		padding: px2Rem(28px) px2Rem(30px) px2Rem(40px);
+		background: #fff;
+		margin-top: px2Rem(10px);
+		color: $titleFontColor;
+
+		.title {
+			padding-bottom: px2Rem(22px);
+		}
+
+		.desc {
+			line-height: 1.5em;
+		}
+	}
+	// 加入黑名单
+	.blacklist {
+		margin-top: px2Rem(20px);
+		padding: px2Rem(20px) px2Rem(50px) px2Rem(14px) px2Rem(30px);
+		background: #Fff;
+
+		.text {
+			line-height: px2Rem(50px); 
+		}
+
+		.blacklist-btn {	
+			width: px2Rem(90px);
+			height: px2Rem(50px);
+			border: 1px solid $borderColor;
+			border-radius: px2Rem(24px);
+			box-shadow: 0 0 px2Rem(6px) #ccc;
+			position: relative;
+			transition: background .3s;
+			.round {
+				width: px2Rem(50px);
+				height: px2Rem(50px);
+				border: 1px solid $borderColor;
+				border-radius: 100%;
+				position: absolute;
+				left: px2Rem(-2px);
+				background: #fff;
+				transition: left .3s;
+			}
+
+		}
+
+		.blacklist-btn-right {
+			background: #45e199;
+
+			.round {
+				left: px2Rem(44px);
+			}
+		}
+	}
+
+
+	.logo-container { 
+ 
+		.logo {
+			width: px2Rem(86px); 
+			height: px2Rem(86px);
+			// background: red;
+			margin-right: px2Rem(30px);
+		}
+
+		.name {
+			color: $titleFontColor;
+		}
+
+		.time {
+			color: $fontColor;
+			padding-top: px2Rem(10px);
+		}
+	}
+
+
+	.info-container {
+		color: $fontColor6;
+		line-height: 1em;
+		padding-top: px2Rem(24px);
+
+		.nature,.scale {
+			padding-top: px2Rem(16px);
+		}
+	}
+}

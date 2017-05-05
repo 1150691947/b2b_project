@@ -1,0 +1,40 @@
+.partake-page .list .item {
+  margin-top: 0.10667rem;
+  background: #fff; }
+  .partake-page .list .item .container {
+    padding: 0.4rem 0.34667rem 0.24rem 0.42667rem;
+    border-bottom: 1px solid #e0e0e0; }
+    .partake-page .list .item .container .reprot {
+      width: 2.29333rem;
+      height: 0.74667rem;
+      background: #2a2a2a;
+      text-align: center;
+      line-height: 0.74667rem;
+      border-radius: 0.13333rem;
+      color: #fff; }
+
+.partake-page .footer-container {
+  padding: 0.37333rem 0.4rem; }
+  .partake-page .footer-container .cooperation {
+    color: #9c8838; }
+    .partake-page .footer-container .cooperation .line {
+      margin: 0 0.08rem 0 0.26667rem; }
+
+.partake-page .logo-container .logo {
+  width: 1.14667rem;
+  height: 1.14667rem;
+  margin-right: 0.4rem; }
+
+.partake-page .logo-container .name {
+  color: #333; }
+
+.partake-page .logo-container .time {
+  color: #999;
+  padding-top: 0.13333rem; }
+
+.partake-page .info-container {
+  color: #666;
+  line-height: 1em;
+  padding-top: 0.32rem; }
+  .partake-page .info-container .nature, .partake-page .info-container .scale {
+    padding-top: 0.21333rem; }
